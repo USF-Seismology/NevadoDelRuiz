@@ -19,7 +19,7 @@ import obspy
 
 homedir = os.path.expanduser('~')
 datatop = os.path.join(homedir, 'Desktop', 'DATA')
-datadir = os.path.join(datatop, 'NevadoDelRuiz','suds')#,'2012', '04', '04')
+datadir = os.path.join(datatop, 'NevadoDelRuiz','suds2')#,'2012', '04', '04')
 
 # Input data extracted to this directory tree structure
 YYYY = '2012'
@@ -71,8 +71,7 @@ def write_day_to_SDS(dayst, SDSdir):
         tr.write(sdsfullpath, format='MSEED')  
                  
 for monthdir in sorted(glob.glob(os.path.join(mseeddir, '[0-1][0-9]'))):
-    #for daydir in sorted(glob.glob(os.path.join(monthdir, '[0-3][0-9]'))):
-    for daydir in sorted(glob.glob(os.path.join(monthdir, '[2-3][0-9]'))):    
+    for daydir in sorted(glob.glob(os.path.join(monthdir, '[0-3][0-9]'))):
         if os.path.isdir(daydir):
             print('\n************************')
             print(daydir)

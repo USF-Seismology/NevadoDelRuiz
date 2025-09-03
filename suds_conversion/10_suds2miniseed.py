@@ -20,7 +20,7 @@ from obspy import read, Stream
 DEFAULT_INPUT_ROOT = Path(r"D:\NevadoDelRuiz\suds_unzipped")
 # WinSUDS assumed to be in a 'winsuds\bin' folder under the current working dir;
 # change this if yours lives somewhere else:
-WINSUDS_PATH = Path.cwd() / "winsuds" / "bin"
+WINSUDS_PATH = Path(r"C:\suds\bin")
 DEMUX = WINSUDS_PATH / "demux.exe"
 IRIG = WINSUDS_PATH / "irig.exe"
 SUD2SAC = WINSUDS_PATH / "sud2sac.exe"
